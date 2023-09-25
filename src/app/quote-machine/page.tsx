@@ -1,5 +1,3 @@
-"use server";
-
 import { cookies } from "next/headers.js";
 import Quote from "./Quote";
 import type { APIResponse } from "./types";

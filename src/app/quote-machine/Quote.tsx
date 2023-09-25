@@ -1,5 +1,4 @@
-"use client";
-
+import RefreshButton from "./RefreshButton";
 import type { Quote } from "./types";
 
 type Props = Quote;
@@ -26,12 +25,7 @@ export default function Quote({ quote, author }: Props) {
 				>
 					Post on X!
 				</a>
-				<button
-					className="rounded-lg border-2 border-zinc-700 bg-gradient-to-b from-zinc-600 to-zinc-700 p-2 shadow shadow-black transition-transform hover:-translate-y-0.5 motion-reduce:transition-none"
-					onClick={() => document.location.reload()}
-				>
-					New quote
-				</button>
+				<RefreshButton></RefreshButton>
 			</span>
 		</div>
 	);
