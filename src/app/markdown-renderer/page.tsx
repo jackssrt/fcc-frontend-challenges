@@ -1,8 +1,7 @@
 "use client";
 
-import { sanitize } from "dompurify";
-import { parse } from "marked";
 import { useState } from "react";
+import ReactMarkdown from "react-markdown";
 import { dedent } from "./../../utils";
 import "./preview.scss";
 
@@ -47,11 +46,9 @@ export default function MarkdownRenderer() {
 			></textarea>
 			<div className="border-l-[1px] border-zinc-600"></div>
 
-			<div
-				id="preview"
-				className="h-full w-full overflow-x-auto overflow-y-scroll rounded-lg"
-				dangerouslySetInnerHTML={{ __html: sanitize(parse(text)) }}
-			></div>
+			<div id="preview" className="h-full w-full overflow-x-auto overflow-y-scroll rounded-lg">
+				<ReactMarkdown>{text}</ReactMarkdown>
+			</div>
 		</div>
 	);
 }
