@@ -1,0 +1,43 @@
+
+.markdown-container {
+	height: calc(100vh - 32px);
+}
+
+#preview {
+	h1 {
+		@apply text-4xl mb-4
+	}
+	h2 {
+		@apply text-3xl mb-4
+	}
+	h3 {
+		@apply text-2xl mb-4
+	}
+	h4 {
+		@apply text-xl mb-4
+	}
+	h5 {
+		@apply text-sm mb-4
+	}
+	h6 {
+		@apply text-xs mb-4
+	}
+	a {
+		&::before {
+			content: " ";
+			@apply bg-teal-400 absolute px-1 h-0.5 w-full rotate-1 transition-all -z-10 bottom-0
+		}
+		&:hover::before {
+			@apply h-full py-1
+		}
+		@apply relative z-10
+		
+	}
+	ul > li::before {
+		content: "・";
+		@apply w-4 mr-1
+	}
+	blockquote {
+		@apply pl-4 border-l-2 border-r-zinc-500 my-2
+	}
+}

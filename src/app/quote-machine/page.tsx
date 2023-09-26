@@ -13,9 +13,7 @@ export default async function QuoteMachine() {
 	).json()) as APIResponse;
 
 	return (
-		<div className="min-w-8 max-w-1/3 grid h-screen place-items-center p-8">
-			{/*~~ is a faster version of Math.floor*/}
-			<Quote {...quotes.quotes[~~(Math.random() * quotes.quotes.length)]}></Quote>
-		</div>
+		// ~~ is a faster version of Math.floor
+		<Quote {...quotes.quotes[~~(Math.random() * quotes.quotes.length)]}></Quote>
 	);
 }
